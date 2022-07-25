@@ -8,6 +8,7 @@
   --back-midle-color: #e5e5e5;
   --logo-color: #000000;
   --portfolio-photo-back-color: #eeeeee;
+  --border-bc: #ececec;
 }
 
 body {
@@ -18,8 +19,20 @@ body {
   font-weight: 400;
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 button {
   font-family: inherit;
+}
+
+img {
+  display: block;
 }
 
 .list {
@@ -42,7 +55,15 @@ button {
   clip-path: inset(50%);
   margin: -1px;
 }
+/* Header */
+.header {
+  border-bottom: 1px solid var(--border-bc);
+}
 
+.header .container {
+  display: flex;
+  align-items: center;
+}
 /* logo */
 
 .logo {
@@ -52,6 +73,10 @@ button {
   font-size: 26px;
   line-height: 1.19fr;
   letter-spacing: 0.03em;
+
+  margin-top: 24px;
+  margin-bottom: 25px;
+  margin-right: 93px;
 }
 
 .logo-black {
@@ -62,8 +87,18 @@ button {
 }
 
 /* nav */
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
 
-.nav-list a {
+.nav-link {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -71,6 +106,9 @@ button {
   letter-spacing: 0.02em;
 }
 
+.nav-list {
+  gap: 50px;
+}
 .nav-list .link-current {
   color: var(--accent-color);
 }
@@ -94,34 +132,51 @@ button {
 .cont-item:focus {
   color: var(--accent-color);
 }
+.cont-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
 
 /* hero */
 
 .hero {
   background-color: var(--back-hero-footer-color);
+  text-align: center;
 }
 
 .hero-head {
+  padding-top: 200px;
+  max-width: 696px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--hero-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .btn-hero {
+  margin-bottom: 200px;
+  padding: 10px 32px;
+  border-radius: 4px;
   color: var(--hero-color);
   background-color: var(--accent-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
   align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+  min-width: 200px;
+  height: 50px;
 }
 
 .btn-hero:hover,
@@ -131,10 +186,25 @@ button {
 
 /* наши ценности */
 
+.task-list {
+  display: flex;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  gap: 30px;
+}
+
+.task {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .details,
 .punctuality,
 .planning,
 .tech {
+  margin-top: 0;
+  margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -147,12 +217,32 @@ button {
 .punctuality-text,
 .planning-text,
 .tech-text {
+  margin-top: 0;
+  margin-bottom: 0;
   color: var(--primery-text-color);
   line-height: 1.71;
 }
+
 /* Чем мы занимаемся */
 
+.wedo {
+  margin-bottom: 94px;
+}
+
+.wedo-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.wedo-list {
+  display: flex;
+  gap: 30px;
+}
+
 .wedo-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -162,11 +252,30 @@ button {
 }
 
 /* Наша команда */
+
+.team-list {
+  display: flex;
+  gap: 30px;
+}
+
+.image {
+  margin-bottom: 30px;
+  width: 270px;
+}
+.team-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
 .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--back-team-color);
 }
 
 .team-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   color: var(--title-text-color);
   column-rule: var(--title-text-color);
   font-weight: 700;
@@ -178,17 +287,20 @@ button {
 
 .team-item {
   background-color: var(--hero-color);
+  width: calc((100% - 60px) / 4);
 }
 .pd,
 .fd,
 .marc,
 .des {
+  margin-top: 0;
+  margin-bottom: 10px;
   column-rule: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
 }
 
 .pd-title,
@@ -196,6 +308,9 @@ button {
 .mark-title,
 .mark-title,
 .des-title {
+  padding-bottom: 30px;
+  margin-bottom: 0;
+  margin-top: 0;
   color: var(--primery-text-color);
   font-weight: 400;
   font-size: 16px;
@@ -206,6 +321,30 @@ button {
 /* footer */
 .footer {
   background-color: var(--back-hero-footer-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.footer .container .logo {
+  margin-bottom: 20px;
+  margin-right: 0;
+}
+.cont-list-foot {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.cont-list-foot .mail-f {
+  margin-bottom: 9px;
+}
+
+.cont-list-foot .tel-f {
+  padding-bottom: 60px;
 }
 
 .white-logo {
@@ -221,15 +360,29 @@ button {
   color: var(--hero-color);
   font-style: normal;
   line-height: 1.71;
+  margin-top: 0;
+  margin-bottom: 9px;
 }
 
 .porfolio {
   color: var(--back-midle-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* button-portfolio */
 
+.button-portfolio {
+  margin-top: 0;
+  margin-bottom: 34px;
+  padding-left: 0;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
 .button-portfolio-item {
+  padding: 6px 22px;
   color: var(--title-text-color);
   background-color: var(--back-team-color);
   font-weight: 500;
@@ -239,17 +392,48 @@ button {
   letter-spacing: 0.03em;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .button-portfolio-item:hover,
 .button-portfolio-item:focus {
-  color: var(--hero-color);
+  color: var(--back-team-color);
   background-color: var(--accent-color);
 }
 
 /* Examples */
 
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.work-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.work-item {
+  width: calc((100% - 60px) / 3);
+}
+
+.imgp {
+}
+
+.work-pretitle .work-title {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
 .work-pretitle {
+  margin-top: 0;
+  margin-bottom: 4px;
+  margin-left: 0;
+  padding-left: 24px;
+  padding-right: 0;
+  padding-top: 20px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -257,6 +441,10 @@ button {
   letter-spacing: 0.06em;
 }
 .work-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 24px;
+  padding-bottom: 20px;
   color: var(--primery-text-color);
   font-size: 16px;
   line-height: 1.88;
@@ -264,4 +452,10 @@ button {
 
 .work-item {
   background-color: var(--hero-color);
+}
+
+.border-title {
+  border-bottom: 1px solid var(--portfolio-photo-back-color);
+  border-left: 1px solid var(--portfolio-photo-back-color);
+  border-right: 1px solid var(--portfolio-photo-back-color);
 }
