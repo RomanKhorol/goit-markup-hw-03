@@ -382,7 +382,7 @@ img {
 
 .button-portfolio {
   margin-top: 0;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   padding-left: 0;
   display: flex;
   gap: 8px;
@@ -391,7 +391,7 @@ img {
 
 .button-portfolio-item {
   padding: 6px 22px;
-  margin-bottom: 50px;
+  margin-bottom: 0;
   color: var(--title-text-color);
   background-color: var(--back-team-color);
   font-weight: 500;
