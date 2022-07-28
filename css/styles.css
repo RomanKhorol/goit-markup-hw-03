@@ -36,6 +36,7 @@ img {
 
 .list {
   list-style: none;
+  padding: 0;
 }
 
 .link {
@@ -70,11 +71,11 @@ img {
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19fr;
+  line-height: 1.19;
   letter-spacing: 0.03em;
 
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 24px;
+  padding-bottom: 25px;
   margin-right: 93px;
 }
 
@@ -103,7 +104,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding: 25px;
+  padding: 32px;
 }
 
 .nav-list {
@@ -129,8 +130,6 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   font-style: normal;
-  padding-left: 25px;
-  padding-right: 25px;
 }
 .cont-item:hover,
 .cont-item:focus {
@@ -334,8 +333,6 @@ img {
 }
 
 .footer .container .logo {
-  padding-left: 15px;
-  padding-right: 15px;
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 20px;
